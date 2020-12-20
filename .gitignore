@@ -1,0 +1,7 @@
+*.back
+*.bck
+*.kicad_pcb-bak
+*.sch-bak
+*-save.pro
+*-save.kicad_pcb
+*.net
