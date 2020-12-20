@@ -1,654 +1,688 @@
-EESchema Schematic File Version 2
-LIBS:Driver_FET
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:MOSFET-P
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:Diode
-LIBS:AUDIO-JACK-3
-LIBS:MOSFET-N
-LIBS:AUDIO-JACK-6
-LIBS:sequenceur-fusex-cache
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "Sequenceur Analogique de Parachute"
+Date "2020-11-13"
+Rev "v02"
+Comp "Zaphod Space"
 Comment1 ""
 Comment2 ""
-Comment3 ""
-Comment4 ""
+Comment3 "License: GPL"
+Comment4 "Author: Zakaria ElQotbi (zskdan)"
 $EndDescr
 $Comp
-L LM324 U1
+L sequenceur-fusex-rescue:LM324-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue U1
 U 1 1 5AEA4BE8
-P 4700 2600
-F 0 "U1" H 4700 2800 50  0000 L CNN
-F 1 "LM324" H 4700 2400 50  0000 L CNN
-F 2 "Housings_DIP:DIP-14_W7.62mm_LongPads" H 4650 2700 50  0001 C CNN
-F 3 "" H 4750 2800 50  0001 C CNN
-	1    4700 2600
+P 6900 3000
+F 0 "U1" H 6900 3200 50  0000 L CNN
+F 1 "LM324" H 6900 2800 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6850 3100 50  0001 C CNN
+F 3 "" H 6950 3200 50  0001 C CNN
+	1    6900 3000
 	1    0    0    -1  
 $EndComp
 $Comp
-L 1N4007 D1
+L Diode:1N4007 D1
 U 1 1 5AEA4D09
-P 2250 1800
-F 0 "D1" H 2250 1900 50  0000 C CNN
-F 1 "1N4007" H 2250 1700 50  0000 C CNN
-F 2 "Diodes_THT:D_DO-41_SOD81_P7.62mm_Horizontal" H 2250 1625 50  0001 C CNN
-F 3 "" H 2250 1800 50  0001 C CNN
-	1    2250 1800
+P 4450 2200
+F 0 "D1" H 4450 2300 50  0000 C CNN
+F 1 "1N4007" H 4450 2100 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA_Handsoldering" H 4450 2025 50  0001 C CNN
+F 3 "" H 4450 2200 50  0001 C CNN
+	1    4450 2200
 	-1   0    0    -1  
 $EndComp
 $Comp
-L 1N4007 D4
+L Diode:1N4007 D4
 U 1 1 5AEA4DBC
-P 6100 2050
-F 0 "D4" H 6100 2150 50  0000 C CNN
-F 1 "1N4007" H 6100 1950 50  0000 C CNN
-F 2 "Diodes_THT:D_DO-41_SOD81_P7.62mm_Horizontal" H 6100 1875 50  0001 C CNN
-F 3 "" H 6100 2050 50  0001 C CNN
-	1    6100 2050
+P 8300 2450
+F 0 "D4" H 8300 2550 50  0000 C CNN
+F 1 "1N4007" H 8300 2350 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA_Handsoldering" H 8300 2275 50  0001 C CNN
+F 3 "" H 8300 2450 50  0001 C CNN
+	1    8300 2450
 	0    1    1    0   
 $EndComp
 $Comp
-L R R11
+L sequenceur-fusex-rescue:R-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue R11
 U 1 1 5AEA4F81
-P 1850 2200
-F 0 "R11" V 1930 2200 50  0000 C CNN
-F 1 "100k" V 1850 2200 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 1780 2200 50  0001 C CNN
-F 3 "" H 1850 2200 50  0001 C CNN
-	1    1850 2200
+P 4050 2600
+F 0 "R11" V 4130 2600 50  0000 C CNN
+F 1 "100k" V 4050 2600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3980 2600 50  0001 C CNN
+F 3 "" H 4050 2600 50  0001 C CNN
+	1    4050 2600
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R9
+L sequenceur-fusex-rescue:R-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue R9
 U 1 1 5AEA540B
-P 3200 2000
-F 0 "R9" V 3280 2000 50  0000 C CNN
-F 1 "1k" V 3200 2000 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 3130 2000 50  0001 C CNN
-F 3 "" H 3200 2000 50  0001 C CNN
-	1    3200 2000
+P 5400 2400
+F 0 "R9" V 5480 2400 50  0000 C CNN
+F 1 "1k" V 5400 2400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5330 2400 50  0001 C CNN
+F 3 "" H 5400 2400 50  0001 C CNN
+	1    5400 2400
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R5
+L sequenceur-fusex-rescue:R-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue R5
 U 1 1 5AEA5451
-P 3450 2250
-F 0 "R5" V 3530 2250 50  0000 C CNN
-F 1 "10k" V 3450 2250 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 3380 2250 50  0001 C CNN
-F 3 "" H 3450 2250 50  0001 C CNN
-	1    3450 2250
+P 5650 2650
+F 0 "R5" V 5730 2650 50  0000 C CNN
+F 1 "10k" V 5650 2650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5580 2650 50  0001 C CNN
+F 3 "" H 5650 2650 50  0001 C CNN
+	1    5650 2650
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R7
-U 1 1 5AEA54B4
-P 2350 3550
-F 0 "R7" V 2430 3550 50  0000 C CNN
-F 1 "1M" V 2350 3550 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 2280 3550 50  0001 C CNN
-F 3 "" H 2350 3550 50  0001 C CNN
-	1    2350 3550
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R6
+L sequenceur-fusex-rescue:R-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue R6
 U 1 1 5AEA551F
-P 5100 2200
-F 0 "R6" V 5180 2200 50  0000 C CNN
-F 1 "1k" V 5100 2200 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 5030 2200 50  0001 C CNN
-F 3 "" H 5100 2200 50  0001 C CNN
-	1    5100 2200
+P 7300 2600
+F 0 "R6" V 7380 2600 50  0000 C CNN
+F 1 "1k" V 7300 2600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7230 2600 50  0001 C CNN
+F 3 "" H 7300 2600 50  0001 C CNN
+	1    7300 2600
 	0    1    1    0   
 $EndComp
 $Comp
-L R R4
+L sequenceur-fusex-rescue:R-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue R4
 U 1 1 5AEA5580
-P 5900 2900
-F 0 "R4" V 5980 2900 50  0000 C CNN
-F 1 "100k" V 5900 2900 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 5830 2900 50  0001 C CNN
-F 3 "" H 5900 2900 50  0001 C CNN
-	1    5900 2900
+P 8100 3300
+F 0 "R4" V 8180 3300 50  0000 C CNN
+F 1 "100k" V 8100 3300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8030 3300 50  0001 C CNN
+F 3 "" H 8100 3300 50  0001 C CNN
+	1    8100 3300
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R10
+L sequenceur-fusex-rescue:R-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue R10
 U 1 1 5AEA55CB
-P 4200 2850
-F 0 "R10" V 4280 2850 50  0000 C CNN
-F 1 "10k" V 4200 2850 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 4130 2850 50  0001 C CNN
-F 3 "" H 4200 2850 50  0001 C CNN
-	1    4200 2850
+P 6400 3250
+F 0 "R10" V 6480 3250 50  0000 C CNN
+F 1 "10k" V 6400 3250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6330 3250 50  0001 C CNN
+F 3 "" H 6400 3250 50  0001 C CNN
+	1    6400 3250
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R3
+L sequenceur-fusex-rescue:R-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue R3
 U 1 1 5AEA5606
-P 5550 2600
-F 0 "R3" V 5630 2600 50  0000 C CNN
-F 1 "1k" V 5550 2600 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 5480 2600 50  0001 C CNN
-F 3 "" H 5550 2600 50  0001 C CNN
-	1    5550 2600
+P 7750 3000
+F 0 "R3" V 7830 3000 50  0000 C CNN
+F 1 "1k" V 7750 3000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7680 3000 50  0001 C CNN
+F 3 "" H 7750 3000 50  0001 C CNN
+	1    7750 3000
 	0    1    1    0   
 $EndComp
 $Comp
-L R R2
+L sequenceur-fusex-rescue:R-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue R2
 U 1 1 5AEA5657
-P 2900 2700
-F 0 "R2" V 2980 2700 50  0000 C CNN
-F 1 "1k" V 2900 2700 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 2830 2700 50  0001 C CNN
-F 3 "" H 2900 2700 50  0001 C CNN
-	1    2900 2700
+P 5100 3100
+F 0 "R2" V 5180 3100 50  0000 C CNN
+F 1 "1k" V 5100 3100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5030 3100 50  0001 C CNN
+F 3 "" H 5100 3100 50  0001 C CNN
+	1    5100 3100
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED LED3
+L sequenceur-fusex-rescue:LED-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue LED3
 U 1 1 5AEA5B5D
-P 5600 2200
-F 0 "LED3" H 5600 2300 50  0000 C CNN
-F 1 "ACT ACTIF" H 5600 2100 50  0000 C TNN
-F 2 "LEDs:LED_0805_HandSoldering" H 5600 2200 50  0001 C CNN
-F 3 "" H 5600 2200 50  0001 C CNN
-	1    5600 2200
+P 7800 2600
+F 0 "LED3" H 7800 2700 50  0000 C CNN
+F 1 "ACT ACTIF" H 7800 2500 50  0000 C TNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7800 2600 50  0001 C CNN
+F 3 "" H 7800 2600 50  0001 C CNN
+	1    7800 2600
 	-1   0    0    1   
 $EndComp
 $Comp
-L LED LED1
+L sequenceur-fusex-rescue:LED-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue LED1
 U 1 1 5AEA5C43
-P 2900 2250
-F 0 "LED1" H 2900 2350 50  0000 C CNN
-F 1 "SEQ ACTIF" H 2900 2150 50  0000 C TNN
-F 2 "LEDs:LED_0805_HandSoldering" H 2900 2250 50  0001 C CNN
-F 3 "" H 2900 2250 50  0001 C CNN
-	1    2900 2250
+P 5100 2650
+F 0 "LED1" H 5100 2750 50  0000 C CNN
+F 1 "SEQ ACTIF" H 5100 2550 50  0000 C TNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5100 2650 50  0001 C CNN
+F 3 "" H 5100 2650 50  0001 C CNN
+	1    5100 2650
 	0    1    -1   0   
 $EndComp
 $Comp
-L LED LED2
-U 1 1 5AEA5C9E
-P 4800 3800
-F 0 "LED2" H 4800 3900 50  0000 C CNN
-F 1 "DECO" H 4800 3700 50  0000 C CNN
-F 2 "LEDs:LED_0805_HandSoldering" H 4800 3800 50  0001 C CNN
-F 3 "" H 4800 3800 50  0001 C CNN
-	1    4800 3800
-	0    -1   -1   0   
-$EndComp
-$Comp
-L LM324 U1
-U 2 1 5AEA5EB1
-P 3750 3600
-F 0 "U1" H 3750 3800 50  0000 L CNN
-F 1 "LM324" H 3750 3400 50  0000 L CNN
-F 2 "Housings_DIP:DIP-14_W7.62mm_LongPads" H 3700 3700 50  0001 C CNN
-F 3 "" H 3800 3800 50  0001 C CNN
-	2    3750 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L CP C2
+L sequenceur-fusex-rescue:CP-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue C2
 U 1 1 5AEA6A18
-P 2500 2500
-F 0 "C2" H 2525 2600 50  0000 L CNN
-F 1 "470uF" H 2525 2400 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_D10.0mm_P5.00mm" H 2538 2350 50  0001 C CNN
-F 3 "" H 2500 2500 50  0001 C CNN
-	1    2500 2500
+P 4700 2900
+F 0 "C2" H 4725 3000 50  0000 L CNN
+F 1 "470uF" H 4725 2800 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x10.5" H 4738 2750 50  0001 C CNN
+F 3 "" H 4700 2900 50  0001 C CNN
+	1    4700 2900
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R8
-U 1 1 5AEA78E5
-P 2350 4000
-F 0 "R8" V 2430 4000 50  0000 C CNN
-F 1 "1k" V 2350 4000 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 2280 4000 50  0001 C CNN
-F 3 "" H 2350 4000 50  0001 C CNN
-	1    2350 4000
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R1
-U 1 1 5AEA7940
-P 4350 3600
-F 0 "R1" V 4430 3600 50  0000 C CNN
-F 1 "1k" V 4350 3600 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 4280 3600 50  0001 C CNN
-F 3 "" H 4350 3600 50  0001 C CNN
-	1    4350 3600
-	0    1    1    0   
-$EndComp
-$Comp
-L C C3
-U 1 1 5AEA7A81
-P 2050 3750
-F 0 "C3" H 2075 3850 50  0000 L CNN
-F 1 "100nF" H 2075 3650 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2088 3600 50  0001 C CNN
-F 3 "" H 2050 3750 50  0001 C CNN
-	1    2050 3750
-	1    0    0    -1  
-$EndComp
-$Comp
-L CP C1
+L sequenceur-fusex-rescue:CP-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue C1
 U 1 1 5AEABB07
-P 3900 2750
-F 0 "C1" H 3925 2850 50  0000 L CNN
-F 1 "47uF" H 3925 2650 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_D6.3mm_P2.50mm" H 3938 2600 50  0001 C CNN
-F 3 "" H 3900 2750 50  0001 C CNN
-	1    3900 2750
+P 6100 3150
+F 0 "C1" H 6125 3250 50  0000 L CNN
+F 1 "47uF" H 6125 3050 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.8" H 6138 3000 50  0001 C CNN
+F 3 "" H 6100 3150 50  0001 C CNN
+	1    6100 3150
 	1    0    0    -1  
 $EndComp
 $Comp
-L POT RV1
+L sequenceur-fusex-rescue:POT-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue RV1
 U 1 1 5AEABDDF
-P 3450 2500
-F 0 "RV1" V 3275 2500 50  0000 C CNN
-F 1 "1M" V 3350 2500 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Alps_RK097_Single_Vertical" H 3450 2500 50  0001 C CNN
-F 3 "" H 3450 2500 50  0001 C CNN
-	1    3450 2500
+P 5650 2900
+F 0 "RV1" V 5475 2900 50  0000 C CNN
+F 1 "1M" V 5550 2900 50  0000 C CNN
+F 2 "SmacSys:3313J1102E" H 5650 2900 50  0001 C CNN
+F 3 "" H 5650 2900 50  0001 C CNN
+	1    5650 2900
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Screw_Terminal_01x02 J1
+L sequenceur-fusex-rescue:Screw_Terminal_01x02-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue J1
 U 1 1 5AEB008B
-P 1250 1900
-F 0 "J1" H 1250 2000 50  0000 C CNN
-F 1 "ALIM 12v" H 1250 1700 50  0000 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm" H 1250 1900 50  0001 C CNN
-F 3 "" H 1250 1900 50  0001 C CNN
-	1    1250 1900
+P 3450 2300
+F 0 "J1" H 3450 2400 50  0000 C CNN
+F 1 "ALIM 12v" H 3450 2100 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 3450 2300 50  0001 C CNN
+F 3 "" H 3450 2300 50  0001 C CNN
+	1    3450 2300
 	-1   0    0    1   
 $EndComp
 $Comp
-L Screw_Terminal_01x02 J2
+L sequenceur-fusex-rescue:Screw_Terminal_01x02-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue J2
 U 1 1 5AEB04C8
-P 6650 1800
-F 0 "J2" H 6650 1572 50  0000 C CNN
-F 1 "ELECTRO AIMANT PERMANANT" H 6650 1922 50  0000 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm" H 6650 1800 50  0001 C CNN
-F 3 "" H 6650 1800 50  0001 C CNN
-	1    6650 1800
+P 8850 2200
+F 0 "J2" H 8850 1972 50  0000 C CNN
+F 1 "ELECTRO AIMANT PERMANANT" H 8850 2322 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 8850 2200 50  0001 C CNN
+F 3 "" H 8850 2200 50  0001 C CNN
+	1    8850 2200
 	1    0    0    -1  
 $EndComp
 $Comp
-L Audio-Jack-2 J3
+L sequenceur-fusex-rescue:Audio-Jack-2-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue J3
 U 1 1 5AEB121F
-P 1300 2450
-F 0 "J3" H 1275 2525 50  0000 C CNN
-F 1 "JACK M/A NF" H 1275 2275 50  0000 C CNN
-F 2 "" H 1550 2450 50  0001 C CNN
-F 3 "" H 1550 2450 50  0001 C CNN
-	1    1300 2450
+P 3500 2850
+F 0 "J3" H 3475 2925 50  0000 C CNN
+F 1 "JACK M/A NF" H 3475 2675 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 3750 2850 50  0001 C CNN
+F 3 "" H 3750 2850 50  0001 C CNN
+	1    3500 2850
 	1    0    0    -1  
 $EndComp
 $Comp
-L Audio-Jack-2 J4
+L sequenceur-fusex-rescue:Audio-Jack-2-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue J4
 U 1 1 5AEB1317
-P 1300 2950
-F 0 "J4" H 1275 3025 50  0000 C CNN
-F 1 "JACK DEP NF" H 1275 2775 50  0000 C CNN
-F 2 "" H 1550 2950 50  0001 C CNN
-F 3 "" H 1550 2950 50  0001 C CNN
-	1    1300 2950
+P 3500 3350
+F 0 "J4" H 3475 3425 50  0000 C CNN
+F 1 "JACK DEP NF" H 3475 3175 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 3750 3350 50  0001 C CNN
+F 3 "" H 3750 3350 50  0001 C CNN
+	1    3500 3350
 	1    0    0    -1  
 $EndComp
 $Comp
-L D_Zener D3
+L sequenceur-fusex-rescue:D_Zener-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue D3
 U 1 1 5AEB361E
-P 5200 2600
-F 0 "D3" H 5200 2700 50  0000 C CNN
-F 1 "BZX79C2V4" H 5200 2500 50  0000 C CNN
-F 2 "Diodes_THT:D_T-1_P5.08mm_Horizontal" H 5200 2600 50  0001 C CNN
-F 3 "" H 5200 2600 50  0001 C CNN
-	1    5200 2600
+P 7400 3000
+F 0 "D3" H 7400 3100 50  0000 C CNN
+F 1 "BZX79C2V4" H 7400 2900 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 7400 3000 50  0001 C CNN
+F 3 "" H 7400 3000 50  0001 C CNN
+	1    7400 3000
 	1    0    0    1   
 $EndComp
 $Comp
-L D_Zener D2
+L sequenceur-fusex-rescue:D_Zener-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue D2
 U 1 1 5AEB5EC3
-P 3200 2700
-F 0 "D2" H 3200 2800 50  0000 C CNN
-F 1 "BZX79C4V7" H 3200 2600 39  0000 C CNN
-F 2 "Diodes_THT:D_T-1_P5.08mm_Horizontal" H 3200 2700 50  0001 C CNN
-F 3 "" H 3200 2700 50  0001 C CNN
-	1    3200 2700
+P 5400 3100
+F 0 "D2" H 5400 3200 50  0000 C CNN
+F 1 "BZX79C4V7" H 5400 3000 39  0000 C CNN
+F 2 "Diode_SMD:D_SOD-523" H 5400 3100 50  0001 C CNN
+F 3 "" H 5400 3100 50  0001 C CNN
+	1    5400 3100
 	0    -1   1    0   
 $EndComp
 $Comp
-L +12V #PWR01
-U 1 1 5AEBDFD9
-P 3650 3200
-F 0 "#PWR01" H 3650 3050 50  0001 C CNN
-F 1 "+12V" H 3650 3340 50  0000 C CNN
-F 2 "" H 3650 3200 50  0001 C CNN
-F 3 "" H 3650 3200 50  0001 C CNN
-	1    3650 3200
-	1    0    0    -1  
-$EndComp
-$Comp
-L +12V #PWR02
+L power:+12V #PWR02
 U 1 1 5AEBE0FE
-P 4600 1700
-F 0 "#PWR02" H 4600 1550 50  0001 C CNN
-F 1 "+12V" H 4600 1840 50  0000 C CNN
-F 2 "" H 4600 1700 50  0001 C CNN
-F 3 "" H 4600 1700 50  0001 C CNN
-	1    4600 1700
+P 6800 2100
+F 0 "#PWR02" H 6800 1950 50  0001 C CNN
+F 1 "+12V" H 6800 2240 50  0000 C CNN
+F 2 "" H 6800 2100 50  0001 C CNN
+F 3 "" H 6800 2100 50  0001 C CNN
+	1    6800 2100
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG03
+L power:PWR_FLAG #FLG03
 U 1 1 5AEBE76F
-P 3700 1500
-F 0 "#FLG03" H 3700 1575 50  0001 C CNN
-F 1 "PWR_FLAG" H 3700 1650 50  0000 C CNN
-F 2 "" H 3700 1500 50  0001 C CNN
-F 3 "" H 3700 1500 50  0001 C CNN
-	1    3700 1500
+P 5900 1900
+F 0 "#FLG03" H 5900 1975 50  0001 C CNN
+F 1 "PWR_FLAG" H 5900 2050 50  0000 C CNN
+F 2 "" H 5900 1900 50  0001 C CNN
+F 3 "" H 5900 1900 50  0001 C CNN
+	1    5900 1900
 	1    0    0    1   
 $EndComp
 $Comp
-L +12V #PWR04
+L power:+12V #PWR04
 U 1 1 5AEBE7DD
-P 3700 1450
-F 0 "#PWR04" H 3700 1300 50  0001 C CNN
-F 1 "+12V" H 3700 1590 50  0000 C CNN
-F 2 "" H 3700 1450 50  0001 C CNN
-F 3 "" H 3700 1450 50  0001 C CNN
-	1    3700 1450
+P 5900 1850
+F 0 "#PWR04" H 5900 1700 50  0001 C CNN
+F 1 "+12V" H 5900 1990 50  0000 C CNN
+F 2 "" H 5900 1850 50  0001 C CNN
+F 3 "" H 5900 1850 50  0001 C CNN
+	1    5900 1850
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR05
+L power:GND #PWR05
 U 1 1 5AEC0819
-P 3300 1550
-F 0 "#PWR05" H 3300 1300 50  0001 C CNN
-F 1 "GND" H 3300 1400 50  0000 C CNN
-F 2 "" H 3300 1550 50  0001 C CNN
-F 3 "" H 3300 1550 50  0001 C CNN
-	1    3300 1550
+P 5500 1950
+F 0 "#PWR05" H 5500 1700 50  0001 C CNN
+F 1 "GND" H 5500 1800 50  0000 C CNN
+F 2 "" H 5500 1950 50  0001 C CNN
+F 3 "" H 5500 1950 50  0001 C CNN
+	1    5500 1950
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG06
+L power:PWR_FLAG #FLG06
 U 1 1 5AEC0869
-P 3300 1450
-F 0 "#FLG06" H 3300 1525 50  0001 C CNN
-F 1 "PWR_FLAG" H 3300 1600 50  0000 C CNN
-F 2 "" H 3300 1450 50  0001 C CNN
-F 3 "" H 3300 1450 50  0001 C CNN
-	1    3300 1450
+P 5500 1850
+F 0 "#FLG06" H 5500 1925 50  0001 C CNN
+F 1 "PWR_FLAG" H 5500 2000 50  0000 C CNN
+F 2 "" H 5500 1850 50  0001 C CNN
+F 3 "" H 5500 1850 50  0001 C CNN
+	1    5500 1850
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR07
+L power:GND #PWR07
 U 1 1 5AEC0935
-P 1900 2600
-F 0 "#PWR07" H 1900 2350 50  0001 C CNN
-F 1 "GND" H 1900 2450 50  0000 C CNN
-F 2 "" H 1900 2600 50  0001 C CNN
-F 3 "" H 1900 2600 50  0001 C CNN
-	1    1900 2600
+P 4100 3000
+F 0 "#PWR07" H 4100 2750 50  0001 C CNN
+F 1 "GND" H 4100 2850 50  0000 C CNN
+F 2 "" H 4100 3000 50  0001 C CNN
+F 3 "" H 4100 3000 50  0001 C CNN
+	1    4100 3000
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG08
+L power:PWR_FLAG #FLG08
 U 1 1 5AEC4741
-P 5150 3000
-F 0 "#FLG08" H 5150 3075 50  0001 C CNN
-F 1 "PWR_FLAG" H 5150 3150 50  0000 C CNN
-F 2 "" H 5150 3000 50  0001 C CNN
-F 3 "" H 5150 3000 50  0001 C CNN
-	1    5150 3000
+P 7350 3400
+F 0 "#FLG08" H 7350 3475 50  0001 C CNN
+F 1 "PWR_FLAG" H 7350 3550 50  0000 C CNN
+F 2 "" H 7350 3400 50  0001 C CNN
+F 3 "" H 7350 3400 50  0001 C CNN
+	1    7350 3400
 	1    0    0    -1  
 $EndComp
 $Comp
-L IRLZ44N Q1
+L sequenceur-fusex-rescue:IRLZ44N-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue Q1
 U 1 1 5B01B738
-P 2100 2350
-F 0 "Q1" H 2000 2700 50  0000 L CNN
-F 1 "IRLZ44N" H 2000 2600 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 2350 2275 50  0001 L CIN
-F 3 "" H 2100 2350 50  0001 L CNN
-	1    2100 2350
+P 4300 2750
+F 0 "Q1" H 4200 3100 50  0000 L CNN
+F 1 "IRLZ44N" H 4200 3000 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TO-263-3_TabPin2" H 4550 2675 50  0001 L CIN
+F 3 "" H 4300 2750 50  0001 L CNN
+	1    4300 2750
 	1    0    0    -1  
 $EndComp
 $Comp
-L IRLZ44N Q2
+L sequenceur-fusex-rescue:IRLZ44N-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue Q2
 U 1 1 5B01B84F
-P 6400 2600
-F 0 "Q2" H 6650 2675 50  0000 L CNN
-F 1 "IRLZ44N" H 6650 2600 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 6650 2525 50  0001 L CIN
-F 3 "" H 6400 2600 50  0001 L CNN
-	1    6400 2600
+P 8600 3000
+F 0 "Q2" H 8850 3075 50  0000 L CNN
+F 1 "IRLZ44N" H 8850 3000 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TO-263-3_TabPin2" H 8850 2925 50  0001 L CIN
+F 3 "" H 8600 3000 50  0001 L CNN
+	1    8600 3000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1850 1800 1850 2050
+	4050 2200 4050 2450
 Wire Wire Line
-	2900 1800 2900 2100
+	5100 2200 5100 2400
 Wire Wire Line
-	2400 1800 6450 1800
+	4600 2200 5100 2200
 Wire Wire Line
-	4050 3600 4200 3600
+	5100 2800 5100 2950
 Wire Wire Line
-	4800 3650 4800 3600
+	4700 3450 4700 3050
 Wire Wire Line
-	4800 3600 4500 3600
+	4700 2750 4700 2400
 Wire Wire Line
-	4800 4300 4800 3950
+	4700 2400 5100 2400
+Connection ~ 5100 2400
+Connection ~ 5100 2200
 Wire Wire Line
-	1550 4300 4800 4300
+	5400 2550 5400 2650
 Wire Wire Line
-	2350 4300 2350 4150
-Connection ~ 3650 4300
+	5400 2650 5500 2650
 Wire Wire Line
-	3450 3700 2350 3700
+	5800 2650 6400 2650
 Wire Wire Line
-	2350 3700 2350 3850
+	7650 2600 7450 2600
 Wire Wire Line
-	2050 4300 2050 3900
-Connection ~ 2350 4300
+	7950 2600 8300 2600
 Wire Wire Line
-	2900 2400 2900 2550
+	8300 2200 8300 2300
 Wire Wire Line
-	2500 3050 2500 2650
+	7150 2600 7150 2200
+Connection ~ 8300 2200
 Wire Wire Line
-	2500 2350 2500 2000
+	6400 3400 6400 3450
+Connection ~ 6400 3450
 Wire Wire Line
-	2500 2000 2900 2000
-Connection ~ 2900 2000
-Connection ~ 2900 1800
+	5100 3250 5100 3450
+Connection ~ 5100 3450
 Wire Wire Line
-	3200 2150 3200 2550
+	7900 3000 8100 3000
 Wire Wire Line
-	3200 2250 3300 2250
+	8100 3000 8100 3150
+Connection ~ 5400 2650
 Wire Wire Line
-	3600 2250 4200 2250
+	6100 3300 6100 3450
+Connection ~ 6100 3450
 Wire Wire Line
-	5450 2200 5250 2200
+	6600 3100 6400 3100
 Wire Wire Line
-	5750 2200 6450 2200
+	6100 3000 5900 3000
 Wire Wire Line
-	6100 1800 6100 1900
+	5900 3000 5900 3350
 Wire Wire Line
-	4950 2200 4950 1800
-Connection ~ 6100 1800
+	6400 3100 6400 2650
+Connection ~ 4050 2200
 Wire Wire Line
-	1500 3050 6400 3050
+	8650 2600 8650 2300
+Connection ~ 8300 2600
 Wire Wire Line
-	4200 3000 4200 3050
-Connection ~ 4200 3050
+	3650 2300 3900 2300
 Wire Wire Line
-	2900 2850 2900 3050
-Connection ~ 2900 3050
+	3900 2300 3900 2950
 Wire Wire Line
-	5700 2600 6200 2600
+	3700 2950 3900 2950
 Wire Wire Line
-	5900 2600 5900 2750
-Connection ~ 3200 2250
+	3700 2850 4050 2850
 Wire Wire Line
-	3900 2900 3900 3050
-Connection ~ 3900 3050
+	4050 2850 4050 2750
+Connection ~ 4700 3450
 Wire Wire Line
-	4400 2700 4200 2700
+	7200 3000 7250 3000
 Wire Wire Line
-	3900 2600 3450 2600
+	7550 3000 7600 3000
 Wire Wire Line
-	3450 2600 3450 3500
+	5400 3250 5400 3450
+Connection ~ 5400 3450
+Connection ~ 3900 2950
 Wire Wire Line
-	4200 2700 4200 2250
+	4550 2400 4550 3450
+Connection ~ 4550 3450
 Wire Wire Line
-	1550 3050 1550 4300
-Connection ~ 2050 4300
-Connection ~ 1850 1800
+	8600 2600 8600 2800
+Connection ~ 8600 2600
+Connection ~ 8100 3000
 Wire Wire Line
-	6450 2200 6450 1900
-Connection ~ 6100 2200
+	8600 3450 8600 3200
+Connection ~ 8100 3450
 Wire Wire Line
-	1450 1900 1700 1900
+	5400 2200 5400 2250
 Wire Wire Line
-	1700 1900 1700 2550
+	5500 2900 5400 2900
+Connection ~ 5400 2900
+Connection ~ 5400 2200
+Connection ~ 7150 2200
 Wire Wire Line
-	1500 2550 2200 2550
+	6800 2100 6800 2200
+Connection ~ 6800 2200
 Wire Wire Line
-	1500 2450 1900 2450
+	6800 3300 6800 3450
+Connection ~ 6800 3450
 Wire Wire Line
-	1850 2450 1850 2350
+	5900 1850 5900 1900
 Wire Wire Line
-	1500 2950 3450 2950
-Connection ~ 1550 3050
-Connection ~ 2500 3050
-Connection ~ 3450 2950
+	5500 1850 5500 1950
 Wire Wire Line
-	5000 2600 5050 2600
+	4100 3000 4100 2950
+Connection ~ 4100 2950
 Wire Wire Line
-	5350 2600 5400 2600
+	5800 2900 6100 2900
 Wire Wire Line
-	3200 2850 3200 3050
-Connection ~ 3200 3050
-Connection ~ 1700 2550
+	6100 2750 6100 2900
+Connection ~ 6100 2900
 Wire Wire Line
-	2350 2000 2350 3050
-Connection ~ 2350 3050
+	5650 2750 6100 2750
 Wire Wire Line
-	6400 2200 6400 2400
-Connection ~ 6400 2200
-Connection ~ 5900 2600
+	7350 3400 7350 3450
+Connection ~ 7350 3450
 Wire Wire Line
-	6400 3050 6400 2800
-Connection ~ 5900 3050
+	8600 2800 8700 2800
 Wire Wire Line
-	3200 1800 3200 1850
+	8600 3200 8700 3200
 Wire Wire Line
-	3650 3900 3650 4300
+	4100 2850 4100 2750
+Connection ~ 4050 2850
 Wire Wire Line
-	3300 2500 3200 2500
-Connection ~ 3200 2500
-Connection ~ 3200 1800
-Connection ~ 4950 1800
+	4400 2550 4400 2400
 Wire Wire Line
-	4600 1700 4600 2300
-Connection ~ 4600 1800
-Wire Wire Line
-	3650 3200 3650 3300
-Wire Wire Line
-	4600 2900 4600 3050
-Connection ~ 4600 3050
-Wire Wire Line
-	3700 1450 3700 1500
-Wire Wire Line
-	2050 3250 3650 3250
-Wire Wire Line
-	2050 3250 2050 3600
-Connection ~ 3650 3250
-Wire Wire Line
-	2350 3400 2350 3250
-Connection ~ 2350 3250
-Wire Wire Line
-	3300 1450 3300 1550
-Wire Wire Line
-	1900 2600 1900 2550
-Connection ~ 1900 2550
-Wire Wire Line
-	3600 2500 4400 2500
-Wire Wire Line
-	3900 2350 3900 2600
-Connection ~ 3900 2500
-Wire Wire Line
-	3450 2350 3900 2350
-Wire Wire Line
-	5150 3000 5150 3050
-Connection ~ 5150 3050
-Wire Wire Line
-	6400 2400 6500 2400
-Wire Wire Line
-	6400 2800 6500 2800
-Wire Wire Line
-	1900 2450 1900 2350
-Connection ~ 1850 2450
-Wire Wire Line
-	2200 2150 2200 2000
-Wire Wire Line
-	2200 2000 2350 2000
+	4400 2400 4550 2400
 $Comp
-L Fuse F1
+L sequenceur-fusex-rescue:Fuse-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue F1
 U 1 1 5B18123E
-P 1600 1800
-F 0 "F1" V 1680 1800 50  0000 C CNN
-F 1 "Fuse" V 1525 1800 50  0000 C CNN
-F 2 "fuse:NANO2_SMD" V 1530 1800 50  0001 C CNN
-F 3 "" H 1600 1800 50  0001 C CNN
-	1    1600 1800
+P 3800 2200
+F 0 "F1" V 3880 2200 50  0000 C CNN
+F 1 "Fuse" V 3725 2200 50  0000 C CNN
+F 2 "Fuse:Fuse_Littelfuse-NANO2-451_453" V 3730 2200 50  0001 C CNN
+F 3 "" H 3800 2200 50  0001 C CNN
+	1    3800 2200
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1750 1800 2100 1800
+	3950 2200 4050 2200
+Wire Wire Line
+	5100 2400 5100 2500
+Wire Wire Line
+	5100 2200 5400 2200
+Wire Wire Line
+	8300 2200 8650 2200
+Wire Wire Line
+	6400 3450 6800 3450
+Wire Wire Line
+	5100 3450 5400 3450
+Wire Wire Line
+	5400 2650 5400 2900
+Wire Wire Line
+	6100 3450 6400 3450
+Wire Wire Line
+	4050 2200 4300 2200
+Wire Wire Line
+	8300 2600 8600 2600
+Wire Wire Line
+	4700 3450 5100 3450
+Wire Wire Line
+	5400 3450 5650 3450
+Wire Wire Line
+	3900 2950 4100 2950
+Wire Wire Line
+	4550 3450 4700 3450
+Wire Wire Line
+	8600 2600 8650 2600
+Wire Wire Line
+	8100 3000 8400 3000
+Wire Wire Line
+	8100 3450 8600 3450
+Wire Wire Line
+	5400 2900 5400 2950
+Wire Wire Line
+	5400 2200 6800 2200
+Wire Wire Line
+	7150 2200 8300 2200
+Wire Wire Line
+	6800 2200 6800 2700
+Wire Wire Line
+	6800 2200 7150 2200
+Wire Wire Line
+	6800 3450 7350 3450
+Wire Wire Line
+	4100 2950 4400 2950
+Wire Wire Line
+	6100 2900 6600 2900
+Wire Wire Line
+	6100 2900 6100 3000
+Wire Wire Line
+	7350 3450 8100 3450
+Wire Wire Line
+	4050 2850 4100 2850
+Wire Wire Line
+	4550 4000 5850 4000
+Wire Wire Line
+	5850 4000 5850 4050
+Wire Wire Line
+	4250 5050 4550 5050
+Wire Wire Line
+	4550 5050 5850 5050
+Wire Wire Line
+	5850 5050 7000 5050
+Connection ~ 4550 4000
+Wire Wire Line
+	4550 4150 4550 4000
+Connection ~ 5850 4000
+Wire Wire Line
+	4250 4000 4250 4350
+Wire Wire Line
+	4250 4000 4550 4000
+Wire Wire Line
+	5850 3950 5850 4000
+Wire Wire Line
+	5850 4650 5850 5050
+Connection ~ 4250 5050
+Connection ~ 4550 5050
+Wire Wire Line
+	4250 5050 4250 4650
+Wire Wire Line
+	4550 4450 4550 4600
+Wire Wire Line
+	5650 4450 4550 4450
+Connection ~ 5850 5050
+Wire Wire Line
+	4550 5050 4550 4900
+Wire Wire Line
+	3750 5050 4250 5050
+Wire Wire Line
+	7000 5050 7000 4700
+Wire Wire Line
+	7000 4350 6700 4350
+Wire Wire Line
+	7000 4400 7000 4350
+Wire Wire Line
+	6250 4350 6400 4350
+$Comp
+L power:+12V #PWR01
+U 1 1 5AEBDFD9
+P 5850 3950
+F 0 "#PWR01" H 5850 3800 50  0001 C CNN
+F 1 "+12V" H 5850 4090 50  0000 C CNN
+F 2 "" H 5850 3950 50  0001 C CNN
+F 3 "" H 5850 3950 50  0001 C CNN
+	1    5850 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L sequenceur-fusex-rescue:C-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue C3
+U 1 1 5AEA7A81
+P 4250 4500
+F 0 "C3" H 4275 4600 50  0000 L CNN
+F 1 "100nF" H 4275 4400 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4288 4350 50  0001 C CNN
+F 3 "" H 4250 4500 50  0001 C CNN
+	1    4250 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L sequenceur-fusex-rescue:R-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue R1
+U 1 1 5AEA7940
+P 6550 4350
+F 0 "R1" V 6630 4350 50  0000 C CNN
+F 1 "1k" V 6550 4350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6480 4350 50  0001 C CNN
+F 3 "" H 6550 4350 50  0001 C CNN
+	1    6550 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L sequenceur-fusex-rescue:R-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue R8
+U 1 1 5AEA78E5
+P 4550 4750
+F 0 "R8" V 4630 4750 50  0000 C CNN
+F 1 "1k" V 4550 4750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4480 4750 50  0001 C CNN
+F 3 "" H 4550 4750 50  0001 C CNN
+	1    4550 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L sequenceur-fusex-rescue:LM324-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue U1
+U 2 1 5AEA5EB1
+P 5950 4350
+F 0 "U1" H 5950 4550 50  0000 L CNN
+F 1 "LM324" H 5950 4150 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5900 4450 50  0001 C CNN
+F 3 "" H 6000 4550 50  0001 C CNN
+	2    5950 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L sequenceur-fusex-rescue:LED-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue LED2
+U 1 1 5AEA5C9E
+P 7000 4550
+F 0 "LED2" H 7000 4650 50  0000 C CNN
+F 1 "DECO" H 7000 4450 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7000 4550 50  0001 C CNN
+F 3 "" H 7000 4550 50  0001 C CNN
+	1    7000 4550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L sequenceur-fusex-rescue:R-sequenceur-fusex-rescue-sequenceur-fusex-rescue-sequenceur-fusex-rescue R7
+U 1 1 5AEA54B4
+P 4550 4300
+F 0 "R7" V 4630 4300 50  0000 C CNN
+F 1 "1M" V 4550 4300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4480 4300 50  0001 C CNN
+F 3 "" H 4550 4300 50  0001 C CNN
+	1    4550 4300
+	1    0    0    -1  
+$EndComp
+Connection ~ 4550 4450
+Wire Wire Line
+	3700 3450 3750 3450
+Wire Wire Line
+	5650 3450 5650 4250
+Connection ~ 5650 3450
+Wire Wire Line
+	5650 3450 6100 3450
+Wire Wire Line
+	3750 3450 3750 5050
+Connection ~ 3750 3450
+Wire Wire Line
+	3750 3450 4550 3450
+Wire Wire Line
+	3700 3350 5900 3350
+Connection ~ 6100 3000
+Connection ~ 6400 3100
 $EndSCHEMATC
