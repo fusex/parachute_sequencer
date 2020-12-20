@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name sequenceur-fusex-rescue)(type Legacy)(uri ${KIPRJMOD}/sequenceur-fusex-rescue.lib)(options "")(descr ""))
+  (lib (name 3313J-1-105)(type Legacy)(uri ${KIPRJMOD}/symbols/3313J-1-105/3313J-1-105.lib)(options "")(descr ""))
 )

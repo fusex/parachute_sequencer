@@ -1,0 +1,26 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model 3313J-1-105
+#/2295655/363948/2.47/3/4/Variable Resistor
+DEF 3313J-1-105 VR 0 30 Y Y 1 F N
+F0 "VR" 950 300 50 H V L CNN
+F1 "3313J-1-105" 950 200 50 H V L CNN
+F2 "3313J1102E" 950 100 50 H I L CNN
+F3 "https://datasheet.datasheetarchive.com/originals/dk/DKDS-12/224541.pdf" 950 0 50 H I L CNN
+F4 "3313 - 3 mm Trimpot Trimming Potentiometer" 950 -100 50 H I L CNN "Description"
+F5 "2.2" 950 -200 50 H I L CNN "Height"
+F6 "Bourns" 950 -300 50 H I L CNN "Manufacturer_Name"
+F7 "3313J-1-105" 950 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "" 950 -500 50 H I L CNN "Arrow Part Number"
+F9 "" 950 -600 50 H I L CNN "Arrow Price/Stock"
+F10 "" 950 -700 50 H I L CNN "Mouser Part Number"
+F11 "" 950 -800 50 H I L CNN "Mouser Price/Stock"
+DRAW
+X CCW 1 0 -100 200 R 50 50 0 0 P
+X WIPER 2 1100 0 200 L 50 50 0 0 P
+X CW 3 0 0 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 900 100 900 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library
